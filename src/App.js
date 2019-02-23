@@ -442,7 +442,6 @@ const mapStateToProps = state => ({
   cart: populateCartItems(state.cart.cart, state.product.products)
 });
 
-
 const mapDispatchToProps = {
   fetchProducts,
   fetchCart,

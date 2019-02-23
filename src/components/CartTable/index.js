@@ -17,7 +17,6 @@ const Wrapper = styled.table`
   }
 `;
 
-
 const CartTable = ({ cart }) => (
     <Wrapper>
         <thead>
