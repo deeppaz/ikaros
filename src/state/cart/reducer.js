@@ -1,16 +1,9 @@
-import {
-    FETCH_CART,
-    FETCH_CART_SUCCESS,
-    FETCH_CART_FAILURE,
-    ADD_TO_CART,
-    ADD_TO_CART_SUCCESS,
-    ADD_TO_CART_FAILURE,
-} from '../actionTypes';
+import { FETCH_CART, FETCH_CART_SUCCESS, FETCH_CART_FAILURE, ADD_TO_CART, ADD_TO_CART_SUCCESS, ADD_TO_CART_FAILURE } from '../actionTypes';
 
 const initialState = {
     isLoading: false,
     cart: { items: [] },
-    error: null,
+    error: null
 };
 
 export default (state = initialState, action) => {
@@ -19,7 +12,7 @@ export default (state = initialState, action) => {
         case ADD_TO_CART:
             return{
                 ...state,
-                isLoading: true,
+                isLoading: true
             };
 
         case FETCH_CART_SUCCESS:
@@ -27,7 +20,7 @@ export default (state = initialState, action) => {
             return{
                 ...state,
                 isLoading: false,
-                cart: action.cart,
+                cart: action.cart
             };
 
         case FETCH_CART_FAILURE:
@@ -35,10 +28,10 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 isLoading: false,
-                error: action.error,
+                error: action.error
             };        
 
         default:
-        return state;
+          return state;
     }
 }

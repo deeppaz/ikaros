@@ -5,19 +5,19 @@ import reducer from './reducer';
 
 export default (initialState) => {
 
-  const sagaMiddleware = createSagaMiddleware();
+    const sagaMiddleware = createSagaMiddleware()
 
-  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose;
+    const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose;
 
-  const enhancers = composeEnhancers(applyMiddleware(sagaMiddleware));
+    const enhancers = composeEnhancers(applyMiddleware(sagaMiddleware));
 
-  const store = createStore(
-    reducer,
-    initialState,
-    enhancers
-  );
+    const store = createStore(
+        reducer,
+        initialState,
+        enhancers
+    );
 
-  sagas.map(sagaMiddleware.run);
+    sagas.map(sagaMiddleware.run);
 
-  return store;
+    return store;
 }

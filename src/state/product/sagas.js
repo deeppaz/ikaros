@@ -1,8 +1,6 @@
 import { put, fork, takeLatest, call } from 'redux-saga/effects';
-import {
-  FETCH_PRODUCTS,
-} from '../actionTypes';
-import { fetchProductsSuccess, fetchProductsFailure } from './action';
+import { FETCH_PRODUCTS } from '../actionTypes';
+import { fetchProductsSuccess, fetchProductsFailure } from './actions';
 import * as productApi from '../../libs/product/api';
 
 export function* fetchProducts(action) {

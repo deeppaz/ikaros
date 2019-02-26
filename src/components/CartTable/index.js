@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import ProductCount from '../ProductGrid/ProductCount';
 
 const Wrapper = styled.table`
   width: 100%;
@@ -17,23 +18,26 @@ const Wrapper = styled.table`
   }
 `;
 
+
 const CartTable = ({ cart }) => (
     <Wrapper>
         <thead>
-          <tr>
-            <th>Yemek Adı</th>
-            <th>Yemek Fiyat</th>
-            <th>Miktar</th>
-          </tr>
+            <tr>
+              <th>Yemek Adı</th>
+              <th>Fiyatı</th>
+              <th>Miktarı</th>
+            </tr>
         </thead>
         <tbody>
-        {cart.items.map(item => (
-            <tr key={item.productId}>
-                <td>{item.product.name}</td>
-                <td>{item.product.price}</td>
-                <td>{item.quantity}</td>
-            </tr>
-        ))}
+            {cart.items.map(item => (
+                <tr key={item.productId}>
+                  <td>{item.product.name}</td>
+                  <td>{item.product.price}₺</td>
+                   <ProductCount>
+                    {item.quantity}
+                   </ProductCount>
+                </tr>
+            ))}
         </tbody>
     </Wrapper>
 );
@@ -41,14 +45,14 @@ const CartTable = ({ cart }) => (
 CartTable.propTypes = {
     cart: PropTypes.shape({
         items: PropTypes.arrayOf(PropTypes.shape({
-           product: PropTypes.shape({
-               name: PropTypes.string.isRequired,
-               price: PropTypes.number.isRequired,
-           }).isRequired,
-           productId: PropTypes.string.isRequired,
-           quantity: PropTypes.number.isRequired, 
+            product: PropTypes.shape({
+                name: PropTypes.string.isRequired,
+                price: PropTypes.number.isRequired
+            }).isRequired,
+            productId: PropTypes.string.isRequired,
+            quantity: PropTypes.number.isRequired
         })).isRequired,
-    }).isRequired,
+    }).isRequired
 };
 
 export default CartTable;

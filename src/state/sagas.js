@@ -3,5 +3,5 @@ import cartSagas from './cart/sagas';
 
 export default [
     productSagas,
-    cartSagas,
+    cartSagas
 ];

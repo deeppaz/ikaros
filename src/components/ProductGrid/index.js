@@ -1,8 +1,8 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import styled from 'styled-components';
-import '../../App.css';
-import addToCart from '../../state/cart/actions';
+import React from "react";
+import PropTypes from "prop-types";
+import styled from "styled-components";
+import "./style.scss";
+import sepetIcon from "../../images/sepete-ekle.png";
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,44 +26,79 @@ const ProductPrice = styled.div`
   margin: 10px 0;
 `;
 
-
-const ProductGrid = ({ products, addToCart, miktarEnc, miktarDec }) => (
+const ProductGrid = ({ products, addToCart }) => (
   <Wrapper>
     {products.map(product => (
-      <ProductWrapper key={product._id} className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
-        <ProductImage className="product-image"
-          src={product.picture}
-        />
-        <ProductName className="productName">
-          {product.name}
-        </ProductName>
-        <ProductPrice className="product-price">{product.price}</ProductPrice>
-
-        <button className="btn-sepete-ekle" onClick={() => addToCart(product)}>
-       Sepete Ekle
-        </button>
-
-        <button  onClick={() => miktarEnc(product)}>+1
-        </button>    
-
-        <button  onClick={() => miktarDec(product)}>-1
-        </button>
-      </ProductWrapper>
+      <div className="wrapper">
+        <div className="container">
+          <div className="bottom">
+            <ProductWrapper key={product._id}>
+              <ProductImage className="product-image" src={product.picture} />
+              <ProductName className="product-name">{product.name}</ProductName>
+              <ProductPrice className="price">{product.price} ₺</ProductPrice>
+              <div>
+                <button onClick={() => addToCart(product)}>
+                  <img className="sepetIcon" src={sepetIcon} />
+                </button>
+              </div>
+            </ProductWrapper>
+          </div>
+        </div>
+        <div className="inside">
+          <div className="icon">
+            <i className="material-icons">Açıklama</i>
+          </div>
+          <div className="contents">
+            <table>
+              <tr>
+                <th>İçindekiler:</th>
+                <th>Height</th>
+              </tr>
+              <tr>
+                <td>3000mm</td>
+                <td>4000mm</td>
+              </tr>
+              <tr>
+                <th>Something</th>
+                <th>Something</th>
+              </tr>
+              <tr>
+                <td>200mm</td>
+                <td>200mm</td>
+              </tr>
+              <tr>
+                <th>Something</th>
+                <th>Something</th>
+              </tr>
+              <tr>
+                <td>200mm</td>
+                <td>200mm</td>
+              </tr>
+              <tr>
+                <th>Something</th>
+                <th>Something</th>
+              </tr>
+              <tr>
+                <td>200mm</td>
+                <td>200mm</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
     ))}
   </Wrapper>
 );
 
 ProductGrid.propTypes = {
-  products: PropTypes.arrayOf(PropTypes.shape({
-    _id: PropTypes.string.isRequired,
-    picture: PropTypes.string.isRequired,
-    name: PropTypes.string.isRequired,
-    price: PropTypes.string.isRequired,
-  })).isRequired,
-  addToCart: PropTypes.func.isRequired,
-  miktarEnc: PropTypes.func.isRequired,
-  miktarDec: PropTypes.func.isRequired,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      _id: PropTypes.string.isRequired,
+      picture: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired
+    })
+  ).isRequired,
+  addToCart: PropTypes.func.isRequired
 };
-
 
 export default ProductGrid;

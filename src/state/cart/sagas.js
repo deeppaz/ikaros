@@ -1,22 +1,6 @@
-import{
-    put,
-    call,
-    takeLatest,
-    fork,
-} from 'redux-saga/effects';
-
-import{
-    fetchCartSuccess,
-    fetchCartFailure,
-    addToCartSuccess,
-    addToCartFailure,
-} from './actions';
-
-import {
-    FETCH_CART,
-    ADD_TO_CART,
-} from '../actionTypes';
-
+import { put, call, takeLatest, fork } from 'redux-saga/effects';
+import { fetchCartSuccess, fetchCartFailure, addToCartSuccess, addToCartFailure } from './actions';
+import { FETCH_CART, ADD_TO_CART } from '../actionTypes';
 import * as cartApi from '../../libs/cart/api';
 
 export function* fetchCart() {
@@ -28,7 +12,7 @@ export function* fetchCart() {
     }
 }
 
-export function* addToCart(action){
+export function* addToCart(action) {
     try {
         const cart = yield call(cartApi.addToCart, action.productId, action.quantity);
         yield put(addToCartSuccess(cart));
@@ -37,15 +21,15 @@ export function* addToCart(action){
     }
 }
 
-export function* watchFetchCart(){
+export function* watchFetchCart() {
     yield takeLatest(FETCH_CART, fetchCart);
 }
 
-export function* watchAddToCart(){
+export function* watchAddToCart() {
     yield takeLatest(ADD_TO_CART, addToCart);
 }
 
-export default function* (){
-    yield fork (watchFetchCart);
-    yield fork (watchAddToCart);
+export default function* () {
+    yield fork(watchFetchCart);
+    yield fork(watchAddToCart);
 }
