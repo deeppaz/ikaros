@@ -129,11 +129,11 @@ class App extends Component {
               <div className="rwd-table">
                 <StepperProvider>
                   <Stepper stage={1}>
-                    <Stepper.Progress>
+                    {/* <Stepper.Progress>
                       <Stepper.Stage num={1} />
                       <Stepper.Stage num={2} />
                       <Stepper.Stage num={3} />
-                    </Stepper.Progress>
+                    </Stepper.Progress> */}
                     <div
                       style={{
                         flex: 1,
@@ -141,7 +141,12 @@ class App extends Component {
                         flexDirection: "column"
                       }}
                     >
-                      <Stepper.Header title="Hoşgeldiniz" />
+                      {/* <Stepper.Header title="Hoşgeldiniz" /> */}
+                       <Stepper.Progress>
+                      <Stepper.Stage num={1} />
+                      <Stepper.Stage num={2} />
+                      <Stepper.Stage num={3} />
+                    </Stepper.Progress>
                       <Stepper.Steps>
                         <Stepper.Step num={1} text={<AboutUs />} />
                         <Stepper.Step num={2} text={<FirebaseSocial />} />

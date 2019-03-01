@@ -7,16 +7,18 @@ const styles = {
 		display: 'flex'
 	},
 	progressContainer: {
-			display: 'flex',
+			height: '60px',
 			width: "auto",
-			margin: '15px 0px 15px 15px',
-			flexDirection: 'column',
-			justifyContent: 'space-between',
-			alignItems: 'center',
-			height: 'calc(100% - 20px)',
-			background: 'white',
+			marginLeft: "20px",
+			marginTop: "20px",
 			border: "2px solid #ccc",
 			borderRadius: '8px',
+			background: 'white',
+			fontWeight: 700,
+			display: 'flex',
+			alignItems: 'center',
+			paddingLeft: '15px'
+			
 	},
 	stagesContainer: {
 			flex: 1,
@@ -84,17 +86,17 @@ const styles = {
 		border: '3px solid #6bada7',
 	},
 	header: {
-		height: '60px',
-		marginLeft: "20px",
-		marginTop: "20px",
-		border: "2px solid #ccc",
-		borderRadius: '8px',
-		color: '#6bada7',
-		fontWeight: 700,
-		fontSize: '24px',
-		display: 'flex',
-		alignItems: 'center',
-		paddingLeft: '15px'
+		// height: '60px',
+		// marginLeft: "20px",
+		// marginTop: "20px",
+		// border: "2px solid #ccc",
+		// borderRadius: '8px',
+		// color: '#6bada7',
+		// fontWeight: 700,
+		// fontSize: '24px',
+		// display: 'flex',
+		// alignItems: 'center',
+		// paddingLeft: '15px'
 	},
 	footer: {
 		height: '30px',
