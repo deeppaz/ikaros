@@ -12,9 +12,9 @@ It is designed to remind menu. easy ordering and everything has been minimalized
 ## Here are some images from the Project:
 
 
-![1](https://imageshack.com/i/plkblIWtp)
-![2](https://imageshack.com/i/poQDN7Ilp)
-![3](https://imageshack.com/i/plRKWwgNp)
-![4](https://imageshack.com/i/pmR8rCYrp)
-![5](https://imageshack.com/i/pne8H03xp)
-![6](https://imageshack.com/i/pnZyU0swp)
+![1](https://imagizer.imageshack.com/img921/7728/kblIWt.png)
+![2](https://imagizer.imageshack.com/img924/2924/QDN7Il.png)
+![3](https://imagizer.imageshack.com/img921/864/RKWwgN.png)
+![4](https://imagizer.imageshack.com/img922/6349/R8rCYr.png)
+![5](https://imagizer.imageshack.com/img923/6914/e8H03x.png)
+![6](https://imagizer.imageshack.com/img923/1747/ZyU0sw.png)
