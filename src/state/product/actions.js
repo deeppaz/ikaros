@@ -4,11 +4,9 @@ export const fetchProducts = () => ({
   type: FETCH_PRODUCTS
 });
 
-export const fetchProductsSuccess = (products, Yiyecekler, Icecekler) => ({
+export const fetchProductsSuccess = (products) => ({
   type: FETCH_PRODUCTS_SUCCESS,
-  products,
-  Yiyecekler, 
-  Icecekler
+  products
 });
 
 export const fetchProductsFailure = (error) => ({

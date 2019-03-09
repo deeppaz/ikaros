@@ -24,6 +24,7 @@ import {
 } from "react-router-dom";
 import CardReactFormContainer from "card-react";
 import "card-react/lib/card.css";
+import {ScrollToTopOnMount, SectionsContainer, Section} from 'react-fullpage'
 
 export const StepperContext = React.createContext();
 
@@ -103,14 +104,25 @@ class App extends Component {
       return <h2>Yükleniyor..</h2>;
     }
 
+    let options = {
+      sectionClassName:     'section',
+      anchors:              ['anasayfa','yiyecekler','icecekler', 'tatlilar', 'odeme'],
+      scrollBar:            false,
+      navigation:           true,
+      verticalAlign:        false,
+      sectionPaddingTop:    '0',
+      sectionPaddingBottom: '0',
+      arrowNavigation:      true,
+      delay:                500
+    };
+
     return (
-      <Router>
         <div>
           <div>
             <button className="sepet-icon" onClick={this.show.bind(this)} />
             <Rodal visible={this.state.visible} onClose={this.hide.bind(this)}>
               <CartTable cart={cart} />
-              <button className="btn-odeme">Odemeye Git</button>
+              <button className="btn-odeme" href="#odeme">Odemeye Git</button>
             </Rodal>
           </div>
           <div>
@@ -123,9 +135,9 @@ class App extends Component {
               text="ALTYUM PROJESINE HOŞGELDİN"
             />
           </div>
-          <Swiper {...params}>
-            <div className="slide slide0">
-              <div className="container">
+          
+          <SectionsContainer {...options}>
+            <Section className="slide0">
               <div className="rwd-table">
                 <StepperProvider>
                   <Stepper stage={1}>
@@ -157,31 +169,17 @@ class App extends Component {
                   </Stepper>
                 </StepperProvider>
                 </div>
-              </div>
-            </div>
-            <div className="slide slide1">
-              <div className="container">
-                <div className="row">
-                  <ProductGrid products={products} addToCart={this.addToCart} />
-                </div>
-              </div>
-            </div>
-            <div className="slide slide2">
-              <div className="container">
-                <div className="row">
-                  <ProductGrid products={products} addToCart={this.addToCart} />
-                </div>
-              </div>
-            </div>
-            <div className="slide slide3">
-              <div className="container">
-                <div className="row">
-                  <ProductGrid products={products} addToCart={this.addToCart} />
-                </div>
-              </div>
-            </div>
-            <div className="slide slide4">
-              <div className="container">
+            </Section>
+            <Section className="slide1">
+            <ProductGrid products={products} addToCart={this.addToCart} />
+            </Section>
+            <Section className="slide2">
+            <ProductGrid products={products} addToCart={this.addToCart} />
+            </Section>
+           <Section className="slide3">
+            <ProductGrid products={products} addToCart={this.addToCart} />
+            </Section>
+           <Section className="slide4">
                 <CardReactFormContainer
                   container="card-wrapper"
                   formInputsNames={{
@@ -221,11 +219,9 @@ class App extends Component {
                     <button>Ödemeyi Tamamla</button> veya <button>Sonra Tamamla</button>
                   </form>
                 </CardReactFormContainer>
-              </div>
-            </div>
-          </Swiper>
+              </Section>
+          </SectionsContainer>
         </div>
-      </Router>
     );
   }
 }

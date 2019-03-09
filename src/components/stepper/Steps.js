@@ -10,7 +10,7 @@ export const Step = ({num, text}) => (
 	<StepperContext.Consumer>
 		{value => {
 			const {stage} = value
-			return stage === num ? <div key={num} style={styles.stageContent}>{text}</div> : null
+			return stage === num ? <div key={num} style={styles.stageContent}>{text}</div> : null 
 		}}
 	</StepperContext.Consumer>
 )
