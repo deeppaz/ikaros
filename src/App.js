@@ -113,7 +113,8 @@ class App extends Component {
       sectionPaddingTop:    '0',
       sectionPaddingBottom: '0',
       arrowNavigation:      true,
-      delay:                500
+      delay:                500,
+      handleMouseWheel: true,
     };
 
     return (
