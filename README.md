@@ -12,14 +12,14 @@ It is designed to remind menu. easy ordering and everything has been minimalized
 ## Here are some images from the Project:
 
 
-![1](https://imagizer.imageshack.com/img921/7728/kblIWt.png)
+![1](https://imagizer.imageshack.com/img924/4592/cxYTIO.png)
 
-![2](https://imagizer.imageshack.com/img924/2924/QDN7Il.png)
+![2](https://imagizer.imageshack.com/img921/489/2N7J3Y.png)
 
-![3](https://imagizer.imageshack.com/img921/864/RKWwgN.png)
+![3](https://imagizer.imageshack.com/img922/113/OYCxlr.png)
 
-![4](https://imagizer.imageshack.com/img922/6349/R8rCYr.png)
+![4](https://imagizer.imageshack.com/img922/2631/iChmZJ.png)
 
-![5](https://imagizer.imageshack.com/img923/6914/e8H03x.png)
+## **NEW UPDATE!:**
 
-![6](https://imagizer.imageshack.com/img923/1747/ZyU0sw.png)
+![5](https://imagizer.imageshack.com/img921/9066/RKvq4A.gif)
