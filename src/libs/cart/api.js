@@ -17,6 +17,7 @@ const saveToLocalStorage = (cart) => {
     if (exists) {
       throw new Error ({ message: 'already exists'});
     }
+    
   
     const newItem = { productId, quantity };
     const newCart = { ...cart, items: [

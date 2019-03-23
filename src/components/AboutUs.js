@@ -11,7 +11,6 @@ export class AboutUs extends Component {
       <br /><br />
       <br /><br />
       <br />
-        <img style={{height: "142px"}} src="http://www.parleistanbul.com/parle_files/201541516115293_mekan-1920x1080px-1.jpg" ></img>
         <p>
           Kalyon Restoran müşterilerine daima en iyi hizmeti ve sunumu
           gerçekleştirmek için 2000 yılından beri değişmeyen tek yerinde tekne
