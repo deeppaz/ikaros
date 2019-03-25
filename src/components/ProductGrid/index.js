@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import "./style.scss";
 import sepetIcon from "../../images/sepete-ekle.png";
+import ProductCount from './ProductCount';
 
 const Wrapper = styled.div`
   display: flex;
@@ -41,6 +42,7 @@ const ProductGrid = ({ products, addToCart }) => (
                   <img className="sepetIcon" src={sepetIcon} />
                 </button>
               </div>
+              <ProductCount>{product.quantity} </ProductCount>
             </ProductWrapper>
           </div>
         </div>
@@ -95,7 +97,9 @@ ProductGrid.propTypes = {
     PropTypes.shape({
       _id: PropTypes.string.isRequired,
       picture: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired
+      name: PropTypes.string.isRequired,
+      price: PropTypes.number.isRequired,
+      quantity: PropTypes.number.isRequired
     })
   ).isRequired,
   addToCart: PropTypes.func.isRequired

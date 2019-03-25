@@ -33,9 +33,10 @@ const CartTable = ({ cart }) => (
                 <tr key={item.productId}>
                   <td>{item.product.name}</td>
                   <td>{item.product.price}₺</td>
-                   <ProductCount>
+                   {/* <ProductCount>
                     {item.quantity}
-                   </ProductCount>
+                   </ProductCount> */}
+                   <td>{item.quantity}</td>
                 </tr>
             ))}
         </tbody>
@@ -47,10 +48,10 @@ CartTable.propTypes = {
         items: PropTypes.arrayOf(PropTypes.shape({
             product: PropTypes.shape({
                 name: PropTypes.string.isRequired,
-                price: PropTypes.number.isRequired
+                price: PropTypes.number.isRequired,
+                quantity: PropTypes.number.isRequired
             }).isRequired,
             productId: PropTypes.string.isRequired,
-            quantity: PropTypes.number.isRequired
         })).isRequired,
     }).isRequired
 };

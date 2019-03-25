@@ -15,7 +15,7 @@ export class ProductCount extends Component {
     this.setState({ clicks: this.state.clicks + 1 });
   }
   DecreaseItem = () => {
-    this.setState({ clicks: this.state.clicks - 1 });
+    this.setState({ clicks: this.state.clicks - 1 && 0 });
   }
 
   render() {

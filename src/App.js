@@ -86,12 +86,14 @@ class App extends Component {
     setTimeout(() => this.setState({ loading: false }), 2700);
   }
 
+
   render() {
     const { isProductsLoading, products, cart } = this.props;
 
     const { loading } = this.state;
 
     const { open } = this.state;
+
     const styles = {
       fontFamily: "sans-serif",
       textAlign: "center"

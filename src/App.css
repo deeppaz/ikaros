@@ -153,37 +153,45 @@
 }
 
 .product-count {
-  padding: 7px;
+  z-index: 8;
+  position: fixed;
+  bottom: 52px;
+  right: 58px;
+  min-width: 24px;
+  color: #2f3542;
+  line-height: 24px;
+  text-align: center;
+  font-size: 48px;
+  font-family: monospace;
 }
 .btn-inc{
+  height: 42px;
   float: left;
   color: green;
-  padding: 0 5px;
+  padding: 0px 18px 0px;
+  margin: 0px 6px 0px;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 20px;
-  margin-left: 2px;
+  font-size: 23px;
 }
 
 .btn-dec{
-  float: left;
+  height: 42px;
+  float: right;
   color: green;
-  padding: 0 5px;
+  padding: 0px 18px 0px;
+  margin: 0px 6px 0px;
   font-weight: bold;
-  font-size: 12px;
-  line-height: 20px;
-  margin-left: 2px;
+  font-size: 23px;
 }
 .count-rakam{
-  float: left;
   color: gold;
-  padding: 2px 8px;
-  font-weight: 500;
-  font-size: 15px;
-  line-height: 20px;
-  margin-left: 2px;
-  border-radius: 3px;
-  background: #609;
+  line-height: 33px;
+  background: rgba(102, 0, 153, 0.562);
+  height: 42px;
+  float: left;
+  font-size: 55px;
+  margin: 0px 1px 0px;
+  padding: 2px 1px 0px;
 }
 .odeme-form{
   font-size: 20px;
