@@ -23,3 +23,8 @@ It is designed to remind menu. easy ordering and everything has been minimalized
 ## **NEW UPDATE!:**
 
 ![5](https://imagizer.imageshack.com/img921/9066/RKvq4A.gif)
+
+> devam etmekte...
+
+### ULASABILIRSINIZ:
+- ![](http://icons.iconarchive.com/icons/iconsmind/outline/48/Mail-icon.png) *deeppaz@hotmail.com*
