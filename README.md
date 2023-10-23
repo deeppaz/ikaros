@@ -27,3 +27,5 @@ It is designed to remind menu. easy ordering and everything has been minimalized
 
 ### ULASABILIRSINIZ:
 - ![](http://icons.iconarchive.com/icons/iconsmind/outline/48/Mail-icon.png) *deeppaz@hotmail.com*
+
+# this repo will not be continued. you can fork and use, but please give credit.
